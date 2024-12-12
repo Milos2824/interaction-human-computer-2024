@@ -9,7 +9,7 @@ import { WebService } from '../web.service';
 
 @Component({
   selector: 'app-home',
-  imports: [JsonPipe, NgIf, HttpClientModule, NgFor, CommonModule, SafePipe, RouterLink],
+  imports: [/*JsonPipe, */NgIf, HttpClientModule, NgFor, CommonModule, SafePipe, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -28,9 +28,5 @@ export class HomeComponent implements OnInit{
   public getMapUrl() {
     const destination = this.flights?.content[0]?.destination || 'World';
     return `https://www.google.com/maps?output=embed&q=${encodeURIComponent(destination)}`;
-  }
-
-  public formatDate(iso: string) {
-    return new Date(iso).toLocaleString('sr-RS')
   }
 }

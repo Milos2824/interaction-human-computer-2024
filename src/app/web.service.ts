@@ -29,4 +29,14 @@ export class WebService {
   public getDestinationImage(dest: string) {
     return 'https://img.pequla.com/destination/' + dest.split(" ")[0].toLowerCase() + '.jpg'
   }
+
+  public formatDate(iso: string | null) {
+    if(iso == null) return "On Time"
+    return new Date(iso).toLocaleString('sr-RS')
+  }
+
+  public formatValue(str: string | null){
+    if(str == null) return 'N/A'
+    return str
+  }
 }
