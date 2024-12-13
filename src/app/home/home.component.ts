@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit{
   public webService: WebService
   public flights: PageModel<FlightModel> | undefined = undefined;
   constructor() {
-    this.webService = new WebService()
+    this.webService = WebService.getInstance()
     
   }
   ngOnInit(): void {
