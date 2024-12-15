@@ -91,7 +91,7 @@ nlu:
     - am I talking to a human?
 
 - intent: lecture_location
-  example: |
+  examples: |
     - where can i attend lectures?
     - in which classroom lectures can be attended?
     - in what building should i come?

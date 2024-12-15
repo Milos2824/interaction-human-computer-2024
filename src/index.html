@@ -16,5 +16,37 @@
   </head>
   <body>
     <app-root></app-root>
+    <!-- <script>!(function () {
+      let e = document.createElement("script"),
+        t = document.head || document.getElementsByTagName("head")[0];
+      (e.src =
+        "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+        // Replace 1.x.x with the version that you want
+        (e.async = !0),
+        (e.onload = () => {
+          window.WebChat.default(
+            {
+              customData: { language: "en" },
+              socketUrl: "http://localhost:5005",
+              socketPath: "/socket.io/",
+              title: "Rasa Chat Bot",
+              subtitle: "Interakcija Covek Racunar"
+
+              // add other props here
+            },
+            null
+          );
+        }),
+        t.insertBefore(e, t.firstChild);
+    })();
+    </script> -->
+    <div
+      id="rasa-webchat-widget"
+      data-websocket-url="http://localhost:5005/"
+    ></div>
+    <script
+      src="https://unpkg.com/@rasahq/rasa-webchat"
+      type="application/javascript"
+    ></script>
   </body>
 </html>

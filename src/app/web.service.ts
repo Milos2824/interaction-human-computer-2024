@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { PageModel } from './models/page.model';
 import { FlightModel } from './models/flight.model';
+import { RasaModel } from './models/rasa-model';
 
 @Injectable({
   providedIn: 'root'
@@ -49,5 +50,20 @@ export class WebService {
   public formatValue(str: string | null){
     if(str == null) return 'N/A'
     return str
+  }
+
+  public sendRasaMessage(value: string) {
+    const url = 'http://localhost:5005/webhooks/rest/webhook'
+    return this.client.post<RasaModel[]>(url,
+      {
+        sender: 'ICRNASTAVA',
+        message: value
+      },
+      {
+        headers: {
+          'Accept': 'application/json'
+        }
+      }
+    )
   }
 }
