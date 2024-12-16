@@ -9,6 +9,10 @@ intents:
   - mood_unhappy
   - bot_challenge
   - lecture_location
+  - test_sanic_actions
+
+actions:
+  - action_hello_world
 
 responses:
   utter_greet:

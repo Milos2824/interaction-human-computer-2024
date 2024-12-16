@@ -96,3 +96,9 @@ nlu:
     - in which classroom lectures can be attended?
     - in what building should i come?
     - how can i attend the lectures?
+
+- intent: test_sanic_actions
+  examples: |
+    - give me a default action response
+    - i want an action response
+    - action test 123

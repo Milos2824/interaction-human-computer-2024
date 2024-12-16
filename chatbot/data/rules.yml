@@ -16,3 +16,8 @@ rules:
   steps:
   - intent: lecture_location
   - action: utter_lecture_location
+
+- rule: Test out the actions integration
+  steps:
+  - intent: test_sanic_actions
+  - action: action_hello_world
