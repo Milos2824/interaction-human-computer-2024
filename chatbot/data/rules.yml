@@ -21,3 +21,8 @@ rules:
   steps:
   - intent: test_sanic_actions
   - action: action_hello_world
+
+- rule: Display departures
+  steps:
+  - intent: flight_list
+  - action: action_flight_list

@@ -1,11 +1,45 @@
 .chatbox-content {
-    width: 300px;
-    height: 400px;
+    width: 500px;
+    height: 600px;
 }
 .chat-body {
     overflow-y: scroll;
-    max-height: 300px;
+    max-height: 500px;
 }
 .msg-content img {
     max-width: 180px !important;
 }
+
+.card-chat {
+    max-width: 200px;
+}
+
+@media only screen and (max-width: 800px) {
+    .chatbox-content {
+        width: 400px;
+        height: 500px;
+    }
+    .chat-body {
+        overflow-y: scroll;
+        max-height: 400px;
+    }
+    
+    .card-chat {
+        max-width: 200px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .chatbox-content {
+        width: 300px;
+        height: 500px;
+    }
+    .chat-body {
+        overflow-y: scroll;
+        max-height: 300px;
+    }
+    
+    .card-chat {
+        max-width: 200px;
+    }
+  }

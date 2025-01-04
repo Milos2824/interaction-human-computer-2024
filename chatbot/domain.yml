@@ -13,6 +13,7 @@ intents:
 
 actions:
   - action_hello_world
+  - action_flight_list
 
 responses:
   utter_greet:
